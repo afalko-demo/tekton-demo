@@ -1,0 +1,16 @@
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: ping-pong
+spec:
+  tasks:
+  - name: hello
+    taskSpec:
+      steps:
+      - image: alpine:3.9
+        script: echo 'ping from alpine' && sleep 10
+  - name: hello
+    taskSpec:
+      steps:
+      - image: alpine:3.9
+        script: echo 'pong from alpine' && sleep 10
