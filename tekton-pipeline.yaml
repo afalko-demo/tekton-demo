@@ -4,12 +4,12 @@ metadata:
   name: ping-pong
 spec:
   tasks:
-  - name: hello
+  - name: ping
     taskSpec:
       steps:
       - image: alpine:3.9
         script: echo 'ping from alpine' && sleep 10
-  - name: hello
+  - name: pong
     taskSpec:
       steps:
       - image: alpine:3.9
