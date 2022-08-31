@@ -16,6 +16,6 @@ spec:
   - name: pong
     taskSpec:
       steps:
-      - name: ping
+      - name: pong
         image: alpine:3.9
         script: sleep 1 && echo 'pong from alpine' && sleep 10
