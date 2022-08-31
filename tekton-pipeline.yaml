@@ -7,10 +7,15 @@ spec:
   - name: ping
     taskSpec:
       steps:
-      - image: alpine:3.9
+      - name: ping
+        image: alpine:3.9
         script: echo 'ping from alpine' && sleep 10
+      - name: post-ping
+        image: alpine:3.9
+        script: echo 'happen after ping'
   - name: pong
     taskSpec:
       steps:
-      - image: alpine:3.9
-        script: echo 'pong from alpine' && sleep 10
+      - name: ping
+        image: alpine:3.9
+        script: sleep 1 && echo 'pong from alpine' && sleep 10
