@@ -18,4 +18,4 @@ spec:
       steps:
       - name: pong
         image: alpine:3.9
-        script: sleep 1 && echo 'pong from alpine' && sleep 1 && echo "pong again at $(date)" && "pong end" && sleep 10
+        script: sleep 1 && echo 'pong from alpine' && sleep 1 && echo "pong again at $(date)" && echo "pong end" && sleep 10
