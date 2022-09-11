@@ -9,7 +9,7 @@ spec:
       steps:
       - name: ping
         image: alpine:3.9
-        script: echo 'ping from alpine' && sleep 1 && echo "ping again at $(date)" && sleep 10 && "ping end"
+        script: echo 'ping from alpine' && sleep 1 && echo "ping again at $(date)" && sleep 10 && echo "ping end"
       - name: post-ping
         image: alpine:3.9
         script: echo 'happen after ping'
